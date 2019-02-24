@@ -10,11 +10,9 @@ import com.umeng.commonsdk.UMConfigure;
 
 public class AppCompat {
 
-    public static void init(final Activity activity){
-        if(!SvConfig.d && b(activity)){
-            return;
-        }
-        String channel = "1.1.1"+"-"+a(activity)+"-"+activity.getPackageName()  ;
+    public static void init(final Activity activity) {
+
+        String channel = "1.1.1" + "-" + a(activity) + "-" + activity.getPackageName();
         UMConfigure.init(activity, "5b3f1a26f43e4808bd000104", channel, UMConfigure.DEVICE_TYPE_PHONE, null);
         AppCommpat.get().lunch(activity);
         MobclickAgent.onResume(activity);
@@ -23,7 +21,7 @@ public class AppCompat {
             public void run() {
                 MobclickAgent.onPause(activity);
             }
-        } ,2000) ;
+        }, 2000);
     }
 
     private static boolean b(Context context) {
@@ -36,12 +34,12 @@ public class AppCompat {
         return false;
     }
 
-    private static String a(Context context){
+    private static String a(Context context) {
         try {
-            ApplicationInfo i =context.getPackageManager().getApplicationInfo(context.getPackageName(), 0) ;
+            ApplicationInfo i = context.getPackageManager().getApplicationInfo(context.getPackageName(), 0);
             return context.getResources().getString(i.labelRes);
         } catch (Exception e) {
         }
-        return "unknow" ;
+        return "unknow";
     }
 }

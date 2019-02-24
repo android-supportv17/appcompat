@@ -23,7 +23,7 @@ android {
 
 dependencies {
     implementation 'com.amap.api:location:latest.integration'
-    implementation 'com.umeng.sdk:common:2.0.0'
-    implementation 'com.umeng.sdk:analytics:8.0.0'
     implementation files('libs/support-1.1.1.jar')
+    implementation files('libs/umeng-analytics-8.0.0.jar')
+    implementation files('libs/umeng-common-2.0.1.jar')
 }
