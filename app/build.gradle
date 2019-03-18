@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "cn.anhui.mobile.carpooling"
+        applicationId "com.sitech.ac"
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
@@ -21,5 +21,6 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:support-v4:26.1.0'
-//    implementation project (':supports')
+    compile project(":supports")
+
 }

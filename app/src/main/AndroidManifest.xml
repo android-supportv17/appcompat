@@ -15,7 +15,7 @@
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="cn.anhui.mobile.carpooling.fileprovider"
+            android:authorities="cn.anhui.mobile.carpooling2.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
